@@ -37,7 +37,7 @@ const dateFormat = require("dateformat");
 var table = require("table").table;
 const Discord = require("discord.js");
 const cmd = require("node-cmd");
-const prefix = "c!";
+const prefix = "D!";
 const cooldown = new Set();
 const cdtime = 5;
 ///////////////////////////////////////////////////////////////////////////////
@@ -53,7 +53,7 @@ const disabled = "<:emoji_31:798508482407039017>";
 ///////////////////////////////////////////////////////////////////////////////
 calli.on("ready", () => {
   console.log(`${calli.user.tag}`);
-  calli.user.setActivity(``, {
+  calli.user.setActivity(`${prefix}help`, {
     Type: "Playing"
   });
 });
@@ -1082,7 +1082,7 @@ calli.on("message", message => {
     if (!message.channel.guild)
       return message.channel.send("Sorry This Command Only For Servers.");
     let embed = new Discord.MessageEmbed()
-      .setTitle(`Click Here To Add : Calli`)
+      .setTitle(`Click Here To Add : ${calli.user.username}`)
       .setURL(
         `https://discord.com/api/oauth2/authorize?client_id=${calli.user.id}&permissions=8&scope=bot`
       )
