@@ -41,7 +41,7 @@ const prefix = "D!";
 const cooldown = new Set();
 const cdtime = 5;
 ///////////////////////////////////////////////////////////////////////////////
-calli.login("Nzk2ODY0NzU4NDYwNTc5ODgw.X_eIIw.PHoXdwhYvnQGkjYIGnrRcMpLUB0");
+calli.login("Nzk0MzA3MDM3MDYwMjY4MDUz.X-46Ew.kVM_oV1aJrBLVZdjY4qxQTDGv7Q");
 ///////////////////////////////////////////////////////////////////////////////
 const color = "BLUE";
 const Image = "";
@@ -78,31 +78,29 @@ calli.on("message", async message => {
       )
       .setThumbnail(message.member.user.displayAvatarURL({ dynamic: true }))
       .setDescription(`
-<a:emoji_5:797912346759659591> __**Info Commands**__ <a:emoji_5:797912346759659591>
-<a:emoji_5:797912346759659591> \`${prefix}botinfo\`
-<a:emoji_5:797912346759659591> \`${prefix}userinfo\`
-<a:emoji_5:797912346759659591> \`${prefix}serverinfo\`
-<a:emoji_5:797912346759659591> \`${prefix}ping\`
-<a:emoji_5:797912346759659591> \`${prefix}invite\`
-
-<a:emoji_74:820378192984539226> __**Moderation Commands**__ <a:emoji_74:820378192984539226>
-<a:emoji_74:820378192984539226> \`${prefix}lock\` <:emoji_31:798508482407039017> 
-<a:emoji_74:820378192984539226> \`${prefix}unlock\` <:emoji_32:798508498605965333> 
-<a:emoji_74:820378192984539226> \`${prefix}ban : @User\`
-<a:emoji_74:820378192984539226> \`${prefix}kick : @User\`
-<a:emoji_74:820378192984539226> \`${prefix}unban : id / all \`
-<a:emoji_74:820378192984539226> \`${prefix}bans\`
-
-<a:emoji_7:797912407309287434> __**Security Commands**__ <a:emoji_7:797912407309287434>
-<a:emoji_7:797912407309287434> \`${prefix}anti kick {number}\`
-<a:emoji_7:797912407309287434> \`${prefix}anti ban {number}\`
-<a:emoji_7:797912407309287434> \`${prefix}anti roleC {number}\`
-<a:emoji_7:797912407309287434> \`${prefix}anti roleD {number}\`
-<a:emoji_7:797912407309287434> \`${prefix}anti channelC {number}\`
-<a:emoji_7:797912407309287434> \`${prefix}anti channelD {number}\`
-<a:emoji_7:797912407309287434> \`${prefix}anti time {number}\`
-<a:emoji_7:797912407309287434> \`${prefix}anti bot {on/off}\`
-<a:emoji_7:797912407309287434>\`${prefix}settings\`
+**Info Commands**
+\`${prefix}botinfo\`
+\`${prefix}userinfo\`
+\`${prefix}serverinfo\`
+\`${prefix}invite\`
+**Moderation Commands**
+\`${prefix}lock\`
+\`${prefix}unlock\`
+\`${prefix}ban\` : @User
+\`${prefix}kick\` : @User
+\`${prefix}unban\` : Id/all
+**Security Number**
+\`${prefix}anti kick\`: **Number**
+\`${prefix}anti ban\`: **Number**
+\`${prefix}anti channelD\`: **Number**
+\`${prefix}anti channelC\`: **Number**
+\`${prefix}anti roleD\`: **Number**
+\`${prefix}anti roleC\`: **Number**
+\`${prefix}anti time **Number**
+**Security On/Off**\`
+\`${prefix}anti bot\`: **on-off**
+**Security**
+\`${prefix}settings\`
 
 
       `);
