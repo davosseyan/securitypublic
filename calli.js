@@ -1126,7 +1126,7 @@ calli.on("message", message => {
     antibots[message.guild.id] = {
       onoff: "On"
     };
-    message.channel.send(``);
+    message.channel.send(`Antibots Is Enbled`);
     fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
       if (err)
         console.error(err).catch(err => {
@@ -1143,7 +1143,7 @@ calli.on("message", message => {
     antibots[message.guild.id] = {
       onoff: "Off"
     };
-    message.channel.send(``);
+    message.channel.send(`Antibots Is Disbled`);
     fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
       if (err)
         console.error(err).catch(err => {
@@ -1167,39 +1167,5 @@ fs.writeFile("./antibots.json", JSON.stringify(antibots), err => {
     console.error(err).catch(err => {
       console.error(err);
     });
-});
-///////////////////////////////////////////////////////////////////////////////
-calli.on("message", message => {
-  if (message.content === prefix + "anti bot on") {
-    if (message.author.id !== message.guild.ownerID) return;
-    if (!message.channel.guild)
-      return message.channel.send("Sorry This Command Only For Servers.");
-    let embed = new Discord.MessageEmbed()
-      .setDescription(
-        `
-Anti Bot Has been updated 
-Enabled: ${enabled}
-`
-      )
-      .setColor(color);
-    message.channel.send({ embed });
-  }
-});
-///////////////////////////////////////////////////////////////////////////////
-calli.on("message", message => {
-  if (message.content === prefix + "anti bot off") {
-    if (message.author.id !== message.guild.ownerID) return;
-    if (!message.channel.guild)
-      return message.channel.send("Sorry This Command Only For Servers.");
-    let embed = new Discord.MessageEmbed()
-      .setDescription(
-        `
-Anti Bot Has been updated 
-Disabled: ${disabled}
-`
-      )
-      .setColor(color);
-    message.channel.send({ embed });
-  }
 });
 ///////////////////////////////////////////////////////////////////////////////
